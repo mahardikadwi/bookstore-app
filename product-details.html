@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea044d41b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Toko Buku | Dicoding Submission</title>
+  </head>
+  <body class="enable-scroll">
+    <header class="header">
+      <div class="header-1">
+        <a href="#" class="logo"><i class="fas fa-book"></i> bookshop.id</a>
+        <form action="" class="search-form">
+          <input
+            type="search"
+            placeholder="Search for books, author, ISBNs..."
+            id="search-box"
+          />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="user-menu">
+          <ul class="nav-list">
+            <li class="nav-links">
+              <a href="#" id="search-btn" class="fas fa-search"></a>
+            </li>
+            <li class="nav-links">
+              <a href="#"><i class="fas fa-heart"></i></a>
+            </li>
+            <li class="nav-links">
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </li>
+            <li class="nav-links">
+              <a href="#" id="signin-btn">Sign In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-2">
+        <nav class="navbar">
+          <div class="category-dropdown">
+            <a href="#" class="dropdown-hover"
+              >Categories <span class="chevron down"></span
+            ></a>
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">Books</a>
+              <a href="#" class="dropdown-item">Magazines</a>
+              <a href="#" class="dropdown-item">Stationery</a>
+              <a href="#" class="dropdown-item">Toys</a>
+            </div>
+          </div>
+          <a href="#">Promotions</a>
+          <a href="#">Pre-Orders</a>
+          <a href="#">Bargain Books</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Store Location</a>
+        </nav>
+      </div>
+
+      <div class="signin-menu">
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <form action="">
+          <h3>Sign In</h3>
+          <span>E-Mail</span>
+          <input
+            type="email"
+            name="email"
+            class="box"
+            placeholder="Enter your e-mail"
+          />
+          <span>Password</span>
+          <input
+            type="password"
+            name="password"
+            class="box"
+            placeholder="Enter your password"
+          />
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="remember-me" />
+            <label for="remember-me">Remember Me</label>
+          </div>
+          <input type="submit" value="Sign In" class="btn" />
+          <p>Forgot your password? <a href="#">Click Here</a></p>
+          <p>Not registered yet? <a href="#">Create one</a></p>
+        </form>
+      </div>
+    </header>
+    <main>
+      <!-- <section class="home" id="home">
+        <div class="container">
+          <div class="content">
+            <h3>Black Friday! Up to 50% off!</h3>
+            <p>Limited time only! shop now for selected books!</p>
+            <a href="" class="btn">Browse the Catalog</a>
+          </div>
+        </div>
+      </section> -->
+      <section class="product-details">
+        <div class="product-details-card">
+          <div class="book-image">
+            <img src="images/donquixote.jpg" alt="" />
+          </div>
+          <div class="product-desc">
+            <span
+              ><h1 class="book-title">
+                Don Quixote (The Extraordinary Adventure)
+              </h1></span
+            >
+            <span
+              ><h2 class="book-date-isbn">
+                Paperback - January 16, 1605
+              </h2></span
+            >
+            <span>
+              <h2 class="book-author">Miguel de Cervantes (Author)</h2>
+            </span>
+            <span><h2 class="book-date-isbn">ISBN-13 : 9780593189641</h2></span>
+            <div class="price">
+              <span class="price-discount">Rp 262,000</span>
+              <span class="price-regular">Rp 313,000</span>
+            </div>
+            <div class="quantity">
+              <button
+                name="min"
+                id="decrease"
+                class="counter-btn btn-decrement"
+                type="button"
+              >
+                <i class="fa fa-minus"></i>
+              </button>
+              <input type="text" id="input-area" class="input-area" value="1" />
+              <button
+                name="plus"
+                id="increase"
+                class="counter-btn btn-increment"
+                type="button"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="button-flex">
+              <button class="btn add-to-cart">Add to Cart</button>
+              <button class="btn add-to-wishlist">Add to Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product-details">
+        <div class="swiper more-details">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Pages</p>
+                <img src="images/pages.png" alt="" />
+                <p>800</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Language</p>
+                <img src="images/language.png" alt="" />
+                <p>English</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Publisher</p>
+                <img src="images/building.png" alt="" />
+                <p>Wordsworth Classic</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>ISBN-13</p>
+                <img src="images/isbn-barcode.png" alt="" />
+                <p>9781647224608</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Dimensions</p>
+                <img src="images/dimensions.png" alt="" />
+                <p>27.41 x 21.21 x 0.81 CM</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Age Range</p>
+                <img src="images/grade.png" alt="" />
+                <p>NA - NA</p>
+              </div>
+            </div>
+            <div class="swiper-slide more-details-carousel">
+              <div class="more-detail-items">
+                <p>Weight</p>
+                <img src="images/weight.png" alt="" />
+                <p>0.91 gr</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <section class="product-details">
+        <div class="product-description-title">
+          <h4>Description</h4>
+        </div>
+        <div class="product-description-text">
+          <div class="product-description-paragraph">
+            Complete and unabridged, <i>Don Quixote</i> is the epic tale of the
+            man from La Mancha and his faithful squire Sancho Panza. Their
+            picaresque adventures in the world of seventeenth-century Spain form
+            the basis of one of the great treasures of Western literature.
+            <p>
+              in a new translation that comes closest, among the modern
+              translation, to the simple, intimate, direct style that summarizes
+              Cervantes' narrative,* <i>Don Quixote</i> is a novel that is both
+              immortal satire of an outdated chivalric code and a biting
+              portrayal of an age in which nobility is a form of madness.
+            </p>
+            <p>
+              *John J. Allen, Professor Emeritus of Spanish, University of
+              Kentucky and Past President of the Cervantes Society of America
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="product-details">
+        <div class="customer-review">
+          <div class="product-description-title">
+            <h4>Customer Review</h4>
+          </div>
+          <div class="product-rating">
+            <div class="review" style="user-select: auto">
+              <span class="rating-stars">
+                <img src="images/stars-0.png" alt="" />
+              </span>
+              <span class="review-cust">
+                <a href="#">(0 customer review)</a>
+              </span>
+            </div>
+            <b>There are currently no reviews for this product</b>
+          </div>
+          <div class="product-rating">
+            <div class="review">Share your thought with other customers:</div>
+            <a href="#">
+              <div class="btn btn-review">Write a Customer Review</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="top-footer">
+      <div class="top-footer-container">
+        <div class="top-footer-content">
+          <h4>Delivery Options:</h4>
+          <img src="images/shipping.png" alt="" />
+        </div>
+        <div class="top-footer-content">
+          <h4>Payment Options:</h4>
+          <img src="images/payments.png" class="payment-options" alt="" />
+          <img src="images/banks.png" alt="" />
+        </div>
+        <div class="top-footer-content">
+          <h4>Secured By:</h4>
+          <img src="images/digicert.png" alt="" />
+        </div>
+      </div>
+    </footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Shipping & Delivery</a>
+          <a href="#">Store Location</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Return Policy</a>
+        </div>
+        <div class="footer-content">
+          <h3>Customer Service</h3>
+          <a href="#">Contact Us</a>
+          <a href="#">Returns</a>
+          <a href="#">Site Map</a>
+          <a href="#">How to Register</a>
+          <a href="#">How to Shop</a>
+          <a href="#">How to Ship & Pay</a>
+        </div>
+        <div class="footer-content">
+          <h3>My Account</h3>
+          <a href="#">Account Details</a>
+          <a href="#">Order History</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Newsletter</a>
+        </div>
+        <div class="footer-content">
+          <h3>Contact Info</h3>
+          <a href="#"><img src="images/profile.png" alt="a photo of me" /></a>
+          <a href="#">Nama: Dwi Panca Mahardhika</a>
+          <a href="#">Tanggal Lahir: 15 Agustus 2000</a>
+          <a href="#"><i class="fas fa-phone"></i>+6289636534411</a>
+          <a href="#"
+            ><i class="fas fa-envelope"></i>@dwimahardika08@gmail.com</a
+          >
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+</html>

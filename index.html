@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea044d41b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Toko Buku | Dicoding Submission</title>
+  </head>
+  <body class="enable-scroll">
+    <header class="header">
+      <div class="header-1">
+        <a href="#" class="logo"><i class="fas fa-book"></i> bookshop.id</a>
+        <form action="" class="search-form">
+          <input
+            type="search"
+            placeholder="Search for books, author, ISBNs..."
+            id="search-box"
+          />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="user-menu">
+          <ul class="nav-list">
+            <li class="nav-links">
+              <a href="#" id="search-btn" class="fas fa-search"></a>
+            </li>
+            <li class="nav-links">
+              <a href="#"><i class="fas fa-heart"></i></a>
+            </li>
+            <li class="nav-links cart">
+              <a href="shopping-cart.html" class="fas fa-shopping-cart"><span>0</span></a>
+            </li>
+            <li class="nav-links">
+              <a href="#" id="signin-btn">Sign In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-2">
+        <nav class="navbar">
+          <div class="category-dropdown">
+            <a href="#" class="dropdown-hover"
+              >Categories <span class="chevron down"></span
+            ></a>
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">Books</a>
+              <a href="#" class="dropdown-item">Magazines</a>
+              <a href="#" class="dropdown-item">Stationery</a>
+              <a href="#" class="dropdown-item">Toys</a>
+            </div>
+          </div>
+          <a href="#">Promotions</a>
+          <a href="#">Pre-Orders</a>
+          <a href="#">Bargain Books</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Store Location</a>
+        </nav>
+      </div>
+
+      <div class="signin-menu">
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <form action="">
+          <h3>Sign In</h3>
+          <span>E-Mail</span>
+          <input
+            type="email"
+            name="email"
+            class="box"
+            placeholder="Enter your e-mail"
+          />
+          <span>Password</span>
+          <input
+            type="password"
+            name="password"
+            class="box"
+            placeholder="Enter your password"
+          />
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="remember-me" />
+            <label for="remember-me">Remember Me</label>
+          </div>
+          <input type="submit" value="Sign In" class="btn" />
+          <p>Forgot your password? <a href="#">Click Here</a></p>
+          <p>Not registered yet? <a href="#">Create one</a></p>
+        </form>
+      </div>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="container">
+          <div class="content">
+            <h3>Black Friday! Up to 50% off!</h3>
+            <p>Limited time only! shop now for selected books!</p>
+            <a href="" class="btn">Browse the Catalog</a>
+          </div>
+        </div>
+      </section>
+      <article class="feature-container">
+        <div class="feature">
+          <i class="fas fa-plane"></i>
+          <div class="content">
+            <h3>Free Shipping</h3>
+            <p>for order over IDR 400.000</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-lock"></i>
+          <div class="content">
+            <h3>Secure Payment Method</h3>
+            <p>Encrypted Purchase</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-redo-alt"></i>
+          <div class="content">
+            <h3>Return Guarantee</h3>
+            <p>if your order is damaged</p>
+          </div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <div class="content">
+            <h3>Customer Support</h3>
+            <p>Ready to answer your problem</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product menu -->
+      <section class="product" id="product">
+        <h1 class="heading"><span>Special Promotions</span></h1>
+        <div class="swiper product-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <a href="product-details.html"
+                  ><img src="images/donquixote.jpg" class="thumbnail" alt=""
+                /></a>
+              </div>
+              <div class="content">
+                <a href="product-details.html"><h3>Don Quixote</h3></a>
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/lesmis.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Les Miserables</h3>
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/frankenstein.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Frankenstein</h3>
+
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/threemusket.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>The Three Musketeer</h3>
+
+                <a href="" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/theraven.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>The Raven</h3>
+
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img
+                  src="images/brotherkaramazov.jpg"
+                  class="thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h3>The Brother Karamazov</h3>
+
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img
+                  src="images/crimeandpunishment.jpg"
+                  class="thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h3>Crime and Punishment</h3>
+
+                <a href="#" class="btn add-cart">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <section class="product" id="product">
+        <h1 class="heading"><span>New Arrivals</span></h1>
+        <div class="swiper product-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/vanishing-half.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>The Vanishing Half</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img
+                  src="images/midnight-library.jpg"
+                  class="thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <h3>The Midnight Library</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/comfort-book.png" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>The Comfort Book</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/never-go.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Never Let Me Go</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/normal-ppl.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Normal People</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/anxiious-ppl.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Anxious People</h3>
+
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-image">
+                <img src="images/crawdads.jpg" class="thumbnail" alt="" />
+              </div>
+              <div class="content">
+                <h3>Where the Crawdads Sing</h3>
+                <a href="#" class="btn">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- Testimonial section -->
+      <section id="testimonial" class="testimonial">
+        <h1 class="heading"><span>Our Customer Review</span></h1>
+        <div class="testi-slider">
+          <div class="wrapper">
+            <div class="testi-card">
+              <div class="content">
+                <div class="review">
+                  <p class="user-testi">
+                    <i>"Kualitas buku nya bagus, dan pengiriman juga cepat."</i>
+                  </p>
+                  <div class="rating">
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                  </div>
+                  <div class="user">
+                    <p>John Doe</p>
+                    <p>Jawa Barat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="content">
+                <div class="review">
+                  <p class="user-testi">
+                    <i
+                      >"Koleksi buku nya lengkap banget, sampai bingung mau beli
+                      yang mana..."</i
+                    >
+                  </p>
+                  <div class="rating">
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                  </div>
+                  <div class="user">
+                    <p class="user-name">Michelle Yeoh</p>
+                    <p class="user-location">Jawa Barat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="content">
+                <div class="review">
+                  <p class="user-testi">
+                    <i>"Harganya dijamin sesuai kantong..."</i>
+                  </p>
+                  <div class="rating">
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                  </div>
+                  <div class="user">
+                    <p class="user-name">Derrick Whibley</p>
+                    <p class="user-location">Jawa Barat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="content">
+                <div class="review">
+                  <p class="user-testi">
+                    <i>"Recommended banget buat yang suka baca buku..."</i>
+                  </p>
+                  <div class="rating">
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                    <img src="images/icon-star.png" alt="" />
+                  </div>
+                  <div class="user">
+                    <p class="user-name">Adam Smith</p>
+                    <p class="user-location">Jawa Barat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="top-footer">
+      <div class="top-footer-container">
+        <div class="top-footer-content">
+          <h4>Delivery Options:</h4>
+          <img src="images/shipping.png" alt="" />
+        </div>
+        <div class="top-footer-content">
+          <h4>Payment Options:</h4>
+          <img src="images/payments.png" alt="" />
+          <img src="images/banks.png" alt="" />
+        </div>
+        <div class="top-footer-content">
+          <h4>Secured By:</h4>
+          <img src="images/digicert.png" alt="" />
+        </div>
+      </div>
+    </footer>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Shipping & Delivery</a>
+          <a href="#">Store Location</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Return Policy</a>
+        </div>
+        <div class="footer-content">
+          <h3>Customer Service</h3>
+          <a href="#">Contact Us</a>
+          <a href="#">Returns</a>
+          <a href="#">Site Map</a>
+          <a href="#">How to Register</a>
+          <a href="#">How to Shop</a>
+          <a href="#">How to Ship & Pay</a>
+        </div>
+        <div class="footer-content">
+          <h3>My Account</h3>
+          <a href="#">Account Details</a>
+          <a href="#">Order History</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Newsletter</a>
+        </div>
+        <div class="footer-content">
+          <h3>Contact Info</h3>
+          <a href="#"><img src="images/profile.png" alt="a photo of me" /></a>
+          <a href="#">Nama: Dwi Panca Mahardhika</a>
+          <a href="#">Tanggal Lahir: 15 Agustus 2000</a>
+          <a href="#"><i class="fas fa-phone"></i>+6289636534411</a>
+          <a href="#"
+            ><i class="fas fa-envelope"></i>@dwimahardika08@gmail.com</a
+          >
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+</html>
