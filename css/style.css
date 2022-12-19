@@ -447,7 +447,7 @@ footer {
 
 /* Product details (when clicked) */
 .product-details {
-  width: 1100px;
+  max-width: 1100px;
   background-color: whitesmoke;
   margin-right: auto;
   margin-left: auto;

@@ -230,7 +230,6 @@ function showCart() {
     });
   }
 }
-
 showCart();
 onLoadCartItems();
 
