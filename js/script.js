@@ -70,43 +70,43 @@ let product = [
   {
     name: "Don Quixote",
     tag: "donquixote",
-    price: 265.0,
+    price: 260.0,
     inCart: 0,
   },
   {
     name: "Les Miserables",
     tag: "lesmis",
-    price: 265.0,
+    price: 286.0,
     inCart: 0,
   },
   {
     name: "Frankenstein",
     tag: "frankenstein",
-    price: 265.0,
+    price: 290.0,
     inCart: 0,
   },
   {
     name: "The Three Musketeers",
-    tag: "threemusketeers",
-    price: 265.0,
+    tag: "threemusket",
+    price: 275.0,
     inCart: 0,
   },
   {
     name: "The Raven",
     tag: "theraven",
-    price: 265.0,
+    price: 205.0,
     inCart: 0,
   },
   {
     name: "The Brother Karamazov",
     tag: "brotherkaramazov",
-    price: 265.0,
+    price: 245.0,
     inCart: 0,
   },
   {
     name: "Crime and Punishment",
     tag: "crimeandpunishment",
-    price: 265.0,
+    price: 235.0,
     inCart: 0,
   },
 ];
@@ -118,6 +118,7 @@ cartsBtn.forEach(function (btn, index) {
     const addTocart = e.currentTarget.classList;
     if (addTocart.contains("add-cart")) {
       setItemAmount(product[index]);
+      totalCost(product[index]);
     }
   });
 });
@@ -137,22 +138,22 @@ function setItemAmount(product) {
 }
 
 function setItem(product) {
-  let cartItems = localStorage.getItem('itemsInCart');
+  let cartItems = localStorage.getItem("itemsInCart");
   cartItems = JSON.parse(cartItems);
-  
+
   if (cartItems != null) {
     if (cartItems[product.tag] == undefined) {
       cartItems = {
         ...cartItems,
-        [product.tag]: product
-      }
+        [product.tag]: product,
+      };
     }
-    cartItems[product.tag].inCart +=1;
+    cartItems[product.tag].inCart += 1;
   } else {
     cartItems = {
       [product.tag]: product,
     };
-  };
+  }
 
   product.inCart = 1;
   localStorage.setItem("itemsInCart", JSON.stringify(cartItems));
@@ -167,6 +168,70 @@ function onLoadCartItems() {
     document.querySelector(".cart span").textContent = productItem;
   }
 }
+
+function totalCost(product) {
+  let costInCart = localStorage.getItem("totalCost");
+
+  if (costInCart != null) {
+    costInCart = parseInt(costInCart);
+    localStorage.setItem("totalCost", costInCart + product.price);
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
+}
+
+function showCart() {
+  let cartItems = localStorage.getItem("itemsInCart");
+  cartItems = JSON.parse(cartItems);
+  let cartContainer = document.querySelector(".cart-items");
+  let cartPrice = document.querySelector(".cart-price");
+  let cartAmount = document.querySelector(".cart-amount");
+  let totalCart = document.querySelector(".cart-total");
+  
+  if (cartItems && cartContainer) {
+    cartContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      cartContainer.innerHTML += `
+      <div class="cart-items">
+        <i class="fas fa-close"></i>
+        <span>${item.name}</span>
+      </div>
+      `;
+    });
+  }
+  if (cartItems && cartPrice) {
+    cartPrice.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      cartPrice.innerHTML += `
+      <div class="cart-price">
+        <span>${item.price}</span>
+      </div>
+      `;
+    });
+  }
+  if (cartItems && cartAmount) {
+    cartAmount.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      cartAmount.innerHTML += `
+      <div class="cart-amount">
+        <span>${item.inCart}</span>
+      </div>
+      `;
+    });
+  }
+  if (cartItems && totalCart) {
+    totalCart.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      totalCart.innerHTML += `
+      <div class="cart-total">
+        </span>$${item.inCart * item.price}</span>
+      </div>
+      `;
+    });
+  }
+}
+
+showCart();
 onLoadCartItems();
 
 // Carousel

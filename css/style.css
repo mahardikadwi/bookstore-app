@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Montserrat:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 :root {
   --navy: #06283d;
@@ -8,7 +8,7 @@
 }
 
 * {
-  font-family: "Gentium Plus", cursive;
+  font-family: "Nanum Gothic", cursive;
   margin: 0;
   padding: 0;
   outline: none;
@@ -625,6 +625,49 @@ footer {
 
 .product-details .product-rating .btn.btn-review {
   margin-top: 5px;
+}
+
+/* Shopping cart */
+.shopping-cart {
+  max-width: 1200px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
+.cart-content {
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "items  items  items  items"
+  ;
+  grid-template-columns: repeat(1fr);
+}
+
+.cart-header {
+  width: 100%;
+}
+
+.cart-header h5 {
+  grid-area: header;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cart-items,
+.cart-price,
+.cart-amount,
+.cart-total {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  align-items: center;
+  grid-area: items;
+  font-size: 1.3rem;
+}
+
+.cart-items img {
+  width: 60px;
 }
 
 /* Footer */
