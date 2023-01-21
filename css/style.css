@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 
 :root {
   --navy: #06283d;
@@ -37,6 +37,10 @@ footer {
   padding: 4rem 7%;
 }
 
+a:visited {
+  color: white;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -56,15 +60,13 @@ footer {
 .btn {
   position: relative;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.2rem;
   color: #fff;
   background: #333;
   transition: all 0.4s ease;
   z-index: 5;
   display: inline-block;
   padding: 10px 16px;
-  border-radius: 0px;
-  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -545,7 +547,7 @@ footer {
   max-width: 70px;
   background-color: lightgray;
   border-radius: 0px;
-  padding: 10px 4px 8px 4px;
+  padding: 7px 6px 6px 6px;
   text-align: center;
 }
 
@@ -554,12 +556,23 @@ footer {
   margin-bottom: 5px;
   background-color: var(--lightblue);
   font-size: 12px;
-  padding: 5px 40px 5px 39px;
+  padding: 10px 36px;
   border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
   display: flex;
   cursor: pointer;
+}
+
+.added {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 100;
+  padding: 20px;
+  background-color: lightgreen;
+  color: white;
+  display: none;
 }
 
 .btn.add-to-cart:hover {
@@ -569,7 +582,7 @@ footer {
 .btn.add-to-wishlist {
   background-color: #d9d9d9;
   font-size: 12px;
-  padding: 5px 29px 5px 29px;
+  padding: 10px 33px;
   border-radius: 5px;
   display: flex;
   cursor: pointer;
@@ -628,47 +641,115 @@ footer {
 }
 
 /* Shopping cart */
-.shopping-cart {
-  max-width: 1200px;
-  background: #d9d9d9;
-  border-radius: 10px;
-  margin: 50px auto;
+.container {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
 }
 
-.cart-content {
-  display: grid;
-  grid-template-areas: 
-  "header header header header"
-  "items  items  items  items"
-  ;
-  grid-template-columns: repeat(1fr);
+.cart-container {
+  margin-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.cart-header {
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 15px;
   width: 100%;
 }
 
-.cart-header h5 {
-  grid-area: header;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.cart-items,
-.cart-price,
-.cart-amount,
-.cart-total {
+.cart-content {
   display: flex;
-  flex-direction: column;
-  padding: 10px 10px;
-  align-items: center;
-  grid-area: items;
-  font-size: 1.3rem;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.cart-items img {
-  width: 60px;
+.product-cart-img img {
+  height: auto;
+  width: 90px;
+  margin-left: 50px;
 }
+
+.product-cart-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.product-cart-title .product-isbn {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.product-cart-title .product-price {
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.remove-btn {
+  background-color: red;
+  padding-top: 10px;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
+
+.btn.cart-btn {
+  margin-top: 15px;
+}
+
+.cart-subtotal {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.cart-subtotal ul li {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.cart-subtotal span {
+  float: right;
+  padding-left: 100px;
+}
+
+.cart-subtotal .last {
+  padding-top: 15px;
+  border-top: 1px solid #000;
+}
+
+.btn.checkout-btn {
+  text-align: center;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  line-height: 18px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.btn.checkout-btn a {
+  color: inherit;
+}
+
 
 /* Footer */
 
