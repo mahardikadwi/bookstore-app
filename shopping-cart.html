@@ -18,7 +18,7 @@
   <body class="enable-scroll">
     <header class="header">
       <div class="header-1">
-        <a href="#" class="logo"><i class="fas fa-book"></i> bookshop.id</a>
+        <a href="index.html" class="logo"><i class="fas fa-book"></i> bookshop.id</a>
         <form action="" class="search-form">
           <input
             type="search"
@@ -37,7 +37,7 @@
             </li>
             <li class="nav-links cart">
               <a href="shopping-cart.html" class="fas fa-shopping-cart"
-                ><span>0</span></a
+                ><span id="cart-count">0</span></a
               >
             </li>
             <li class="nav-links">
@@ -97,29 +97,62 @@
       </div>
     </header>
     <main>
-      <section class="shopping-cart">
-        <div class="cart-content">
-          <div class="cart-header">
-            <h5 class="title">Book Name</h5>
-            <div class="cart-items"></div>
-          </div>
-          <div class="cart-header">
-            <h5 class="price">Price</h5>
-            <div class="cart-price"></div>
-          </div>
-          <div class="cart-header">
-            <h5 class="amount">Amount</h5>
-            <div class="cart-amount"></div>
-          </div>
-          <div class="cart-header">
-            <h5 class="total">Total</h5>
-            <div class="cart-total"></div>
-          </div>
-          <!-- <div class="cart-subtotal">
-            <h3>Your Cart Total: </h3>
-          </div> -->
+      <div class="container">
+        <div class="cart-container" id="cart-container">
+          <!-- <section class="cart-items">
+            <div class="cart-content">
+              <div class="product-cart-img">
+                <img src="images/donquixote.jpg" alt="">
+              </div>
+              <div class="product-cart-title">
+                <p class="product-name">Don Quixote (Miguel de Cervantes)</p>
+                <p class="product-isbn">9781647224608</p>
+                <p class="product-price">Rp 262,000</p>
+                <div class="quantity cart-qty">
+                  <button
+                    name="min"
+                    id="decrease"
+                    class="counter-btn btn-decrement"
+                    type="button"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input type="text" id="input-area" class="input-area" value="1" />
+                  <button
+                    name="plus"
+                    id="increase"
+                    class="counter-btn btn-increment"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <div class="cart-button">
+                  <button class="btn remove-btn">Remove</button>
+                  <button class="btn cart-btn">Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <!-- <section class="cart-subtotal">
+            <div class="total">
+              <ul>
+                <li>
+                  Sub Total
+                  <span id="sub-total"></span>
+                </li>
+                <li class="last">
+                  Total
+                  <span id="sub-total"></span>
+                </li>
+              </ul>
+              <div class="btn checkout-btn">
+                <a href="#">Checkout</a>
+              </div>
+            </div>
+          </section> -->
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- Footer -->

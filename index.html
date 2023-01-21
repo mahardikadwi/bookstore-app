@@ -18,7 +18,9 @@
   <body class="enable-scroll">
     <header class="header">
       <div class="header-1">
-        <a href="#" class="logo"><i class="fas fa-book"></i> bookshop.id</a>
+        <a href="index.html" class="logo"
+          ><i class="fas fa-book"></i> bookshop.id</a
+        >
         <form action="" class="search-form">
           <input
             type="search"
@@ -36,7 +38,9 @@
               <a href="#"><i class="fas fa-heart"></i></a>
             </li>
             <li class="nav-links cart">
-              <a href="shopping-cart.html" class="fas fa-shopping-cart"><span>0</span></a>
+              <a href="shopping-cart.html" class="fas fa-shopping-cart"
+                ><span id="cart-count">0</span></a
+              >
             </li>
             <li class="nav-links">
               <a href="#" id="signin-btn">Sign In</a>
@@ -63,6 +67,10 @@
           <a href="#">Wishlist</a>
           <a href="#">Store Location</a>
         </nav>
+      </div>
+
+      <div class="added" id="alert-box">
+        <h3>Your item has been added to cart!</h3>
       </div>
 
       <div class="signin-menu">
@@ -147,8 +155,10 @@
                 /></a>
               </div>
               <div class="content">
-                <a href="product-details.html"><h3>Don Quixote</h3></a>
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <a href="product-details.html"
+                  ><h3 class="product-name">Don Quixote</h3></a
+                >
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
             <div class="swiper-slide product-card">
@@ -156,8 +166,8 @@
                 <img src="images/lesmis.jpg" class="thumbnail" alt="" />
               </div>
               <div class="content">
-                <h3>Les Miserables</h3>
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">Les Miserables</h3>
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
             <div class="swiper-slide product-card">
@@ -165,19 +175,21 @@
                 <img src="images/frankenstein.jpg" class="thumbnail" alt="" />
               </div>
               <div class="content">
-                <h3>Frankenstein</h3>
-
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">Frankenstein</h3>
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
             <div class="swiper-slide product-card">
               <div class="product-image">
-                <img src="images/threemusketeers.jpg" class="thumbnail" alt="" />
+                <img
+                  src="images/threemusketeers.jpg"
+                  class="thumbnail"
+                  alt=""
+                />
               </div>
               <div class="content">
-                <h3>The Three Musketeer</h3>
-
-                <a href="" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">The Three Musketeer</h3>
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
             <div class="swiper-slide product-card">
@@ -185,9 +197,8 @@
                 <img src="images/theraven.jpg" class="thumbnail" alt="" />
               </div>
               <div class="content">
-                <h3>The Raven</h3>
-
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">The Raven</h3>
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
             <div class="swiper-slide product-card">
@@ -199,9 +210,8 @@
                 />
               </div>
               <div class="content">
-                <h3>The Brother Karamazov</h3>
-
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">The Brother Karamazov</h3>
+                <button type="button" class="btn add-cart">Add to Cart></button>
               </div>
             </div>
             <div class="swiper-slide product-card">
@@ -213,9 +223,8 @@
                 />
               </div>
               <div class="content">
-                <h3>Crime and Punishment</h3>
-
-                <a href="#" class="btn add-cart">Add to Cart</a>
+                <h3 class="product-name">Crime and Punishment</h3>
+                <button type="button" class="btn add-cart">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -399,7 +408,6 @@
         </div>
       </section>
     </main>
-
     <!-- Footer -->
     <footer class="top-footer">
       <div class="top-footer-container">
