@@ -119,11 +119,11 @@ let product = [
 ];
 
 const cartsBtn = document.querySelectorAll(".add-cart");
-const alertBox = document.querySelector('#alert-box');
+const alertBox = document.querySelector("#alert-box");
 
 function showAlert() {
   alertBox.style.display = "block";
-  setTimeout(function(){ 
+  setTimeout(function () {
     alertBox.style.display = "none";
   }, 3000);
 }
@@ -155,7 +155,7 @@ function setItem(product) {
   let cartItems = localStorage.getItem("itemsInCart");
   cartItems = JSON.parse(cartItems);
   let costInCart = localStorage.getItem("totalCost");
-  costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart); 
+  costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart);
 
   if (cartItems != null) {
     if (cartItems[product.tag] == undefined) {
@@ -163,14 +163,14 @@ function setItem(product) {
         ...cartItems,
         [product.tag]: product,
       };
-      costInCart += product.price
+      costInCart += product.price;
     }
     cartItems[product.tag].inCart += 1;
   } else {
     cartItems = {
       [product.tag]: product,
     };
-    costInCart += product.price
+    costInCart += product.price;
   }
 
   product.inCart = 1;
@@ -185,7 +185,6 @@ function onLoadCartItems() {
   }
 }
 
-
 function updateCart() {
   let cartItems = localStorage.getItem("itemsInCart");
   cartItems = JSON.parse(cartItems);
@@ -194,11 +193,11 @@ function updateCart() {
 
   if (cartItems && cartContainer) {
     if (Object.keys(cartItems).length === 0) {
-      cartContainer.innerHTML = "<h1>Your cart is empty</h1>"
+      cartContainer.innerHTML = "<h1>Your cart is empty</h1>";
     } else {
       cartContainer.innerHTML = "";
-    Object.values(cartItems).map((item) => {
-      cartContainer.innerHTML += `
+      Object.values(cartItems).map((item) => {
+        cartContainer.innerHTML += `
       <section class="cart-items" data-tag="${item.tag}">
       <div class="cart-content">
         <div class="product-cart-img">
@@ -234,7 +233,7 @@ function updateCart() {
       </div>
     </section>
       `;
-    });
+      });
     }
     if (Object.keys(cartItems).length > 0) {
       cartContainer.innerHTML += `
@@ -243,11 +242,11 @@ function updateCart() {
           <ul>
             <li>
               Sub Total
-                <span id="sub-total">Rp.${costInCart}.000</span>
+                <span id="sub-total">Rp.${costInCart},000</span>
             </li>
             <li class="last">
               Total
-                <span id="curr-total">Rp.${costInCart}.000</span>
+                <span id="curr-total">Rp.${costInCart},000</span>
             </li>
             </ul>
             <div class="btn checkout-btn">
@@ -260,10 +259,10 @@ function updateCart() {
   }
 }
 
-let container = document.querySelector('#cart-container');
+let container = document.querySelector("#cart-container");
 if (container) {
-  container.addEventListener('click', deleteProduct);
-  container.addEventListener("click", function(event) {
+  container.addEventListener("click", deleteProduct);
+  container.addEventListener("click", function (event) {
     if (event.target.classList.contains("btn-increment")) {
       // increment the quantity in the cart
       let quantity = event.target.previousElementSibling;
@@ -272,46 +271,58 @@ if (container) {
       // get the tag of the product from the data-tag attribute
       let productTag = event.target.closest(".cart-items").dataset.tag;
       // get the product from the product array
-      let selectedProduct = product.find(p => p.tag === productTag);
+      let selectedProduct = product.find((p) => p.tag === productTag);
       // get the original price of the product
       let productPrice = selectedProduct.price;
 
       // update the total cost
       let costInCart = localStorage.getItem("totalCost");
-      costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart); 
+      costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart);
       localStorage.setItem("totalCost", costInCart + productPrice);
 
       // update the text content of the total element
       let subTotalElem = document.querySelector("#sub-total");
       let currTotal = document.querySelector("#curr-total");
       if (subTotalElem && currTotal) {
-        subTotalElem.textContent = `Rp.${costInCart + productPrice}.000`;
-        currTotal.textContent = `Rp.${costInCart + productPrice}.000`
+        let newCost = costInCart + productPrice;
+        let costString = newCost.toLocaleString("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 3,
+        });
+        subTotalElem.textContent = costString;
+        currTotal.textContent = costString;
       }
     } else if (event.target.classList.contains("btn-decrement")) {
       // decrement the quantity in the cart
       let quantity = event.target.nextElementSibling;
-      if(quantity.value > 1) {
+      if (quantity.value > 1) {
         quantity.value = parseInt(quantity.value) - 1;
 
         // get the tag of the product from the data-tag attribute
         let productTag = event.target.closest(".cart-items").dataset.tag;
         // get the product from the product array
-        let selectedProduct = product.find(p => p.tag === productTag);
+        let selectedProduct = product.find((p) => p.tag === productTag);
         // get the original price of the product
         let productPrice = selectedProduct.price;
 
         // update the total cost
         let costInCart = localStorage.getItem("totalCost");
-        costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart); 
+        costInCart = isNaN(parseInt(costInCart)) ? 0 : parseInt(costInCart);
         localStorage.setItem("totalCost", costInCart - productPrice);
 
         // update the text content of the total element
         let subTotalElem = document.querySelector("#sub-total");
         let currTotal = document.querySelector("#curr-total");
         if (subTotalElem && currTotal) {
-          subTotalElem.textContent = `Rp ${costInCart - productPrice}.000`;
-          currTotal.textContent = `Rp ${costInCart - productPrice}.000`
+          let newCost = costInCart - productPrice;
+          let costString = newCost.toLocaleString("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 3,
+          });
+          subTotalElem.textContent = costString;
+          currTotal.textContent = costString;
         }
       }
     }
@@ -340,7 +351,6 @@ function deleteProduct(e) {
 }
 updateCart();
 onLoadCartItems();
-
 
 // Carousel
 var swiper = new Swiper(".product-slider", {
