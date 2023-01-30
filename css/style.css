@@ -871,11 +871,14 @@ a:visited {
     flex-direction: column;
     padding-bottom: 30px;
   }
-  .top-footer-content .payment-options {
+  .top-footer-content .payment-opt{
     width: 150px;
-    align-self: center;
-    justify-content: center;
-    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .top-footer-content .payment-opt-2 {
+    width: 340px;
+    padding-top: 20px;
   }
   .product-details {
     width: 100%;
@@ -908,5 +911,21 @@ a:visited {
   }
   .top-footer-container {
     flex-direction: column;
+  }
+  .top-footer-content .payment-opt{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .top-footer-content .payment-opt-2 {
+    width: 340px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header .header-1 div, .header .header-1 ul li, .header .header-1 a {
+    font-size: 12px;
+    margin-left: 1rem;
   }
 }
